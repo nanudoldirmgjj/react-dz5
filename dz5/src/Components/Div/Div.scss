@@ -1,0 +1,98 @@
+@import '../../style/vars.scss';
+
+@mixin mini_block_rules($padding_vertical, $paddint_horizontal, $fSize, $fColor) {
+    padding: $padding_vertical $paddint_horizontal;
+    font-size: $fSize;
+    color: $fColor;
+    border: 1px solid rgba(255, 255, 255, 0.486);
+}
+
+p {
+    font-family: $font;
+    text-align: center;
+
+}
+
+@mixin background($bColor) {
+    background-color: $bColor;
+}
+
+.div {
+    margin: auto;
+}
+
+.title {
+    @include mini_block_rules(20px, 10px, 15px, white)
+}
+
+
+
+.blue_dark {
+    @include background(#1AA0A8);
+}
+
+.green_dark {
+    @include background(#1E856B);
+
+}
+
+.red_dark {
+    @include background(#C6554F);
+}
+
+.dark_dark {
+    @include background(#26303A);
+
+}
+
+
+
+
+.price {
+    @include mini_block_rules(30px, 10px, 30px, white)
+}
+
+sub {
+    font-size: 15px
+}
+
+.top_sub {
+    vertical-align: super;
+}
+
+
+
+.blue {
+    @include background(#2CC1D7);
+}
+
+.green {
+    @include background(#23AE8F);
+}
+
+.red {
+    @include background(#F36B5F);
+}
+
+.dark {
+    @include background(#313946);
+}
+
+
+
+.speed {
+    @include background(#F9F9F9);
+
+    p {
+        @include mini_block_rules(20px, 10px, 15px, rgba(0, 0, 0, 0.592));
+    }
+}
+
+.description {
+    @include background(#EDEDEF);
+    @include mini_block_rules(20px, 10px, 15px, rgba(0, 0, 0, 0.592));
+
+    p {
+        line-height: 30px;
+    }
+}
